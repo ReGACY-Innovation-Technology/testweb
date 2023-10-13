@@ -5,8 +5,8 @@
 
     <h1 class="title">hello</h1>
     <?php
-        $mysql = new mysqli($_ENV['DATABASE_HOST'], $_ENV['MYSQL_USER'], $_ENV['MYSQL_ALLOW_EMPTY_PASSWORD'], $_ENV['MYSQL_DATABASE']);
-        
+        $mysql = new mysqli($_ENV['DATABASE_HOST'], $_ENV['MYSQL_USER'], $_ENV['MYSQL_PASSWORD'], $_ENV['MYSQL_DATABASE']);
+
         if (!$mysql) {
             echo "Error: Unable to connect to MySQL." . PHP_EOL;
             echo "Debugging error: " . mysqli_connect_error() . PHP_EOL;
